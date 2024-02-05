@@ -1,0 +1,50 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  & > h2 {
+    @include h1-title;
+    margin-bottom: 32px;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 34px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > button {
+    min-height: 40px;
+    padding: 4px 45px;
+    border-radius: $border-radius-6xl;
+
+    &:first-of-type {
+      padding: 4px 32px;
+    }
+  }
+}
+
+.video {
+  @include flex-center;
+  min-height: 297px;
+  width: 100%;
+  max-width: 668px;
+  border-radius: $border-radius-xl;
+  background-image: url('/images/video.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+
+  &_employee {
+    background-image: url('/images/video_2.png');
+  }
+}

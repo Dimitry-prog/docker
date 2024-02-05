@@ -1,0 +1,42 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  position: relative;
+
+  input {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-bottom: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/icons/checkbox-inactive.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &:checked:before {
+      background-image: url('/icons/checkbox.svg');
+    }
+  }
+}
+
+.error {
+  @include text-typing-s;
+  margin-top: 4px;
+  display: block;
+  color: $color-red;
+}

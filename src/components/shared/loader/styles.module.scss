@@ -1,0 +1,43 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.loader {
+  color: $color-grey-tertiary-btn;
+  fill: $color-red;
+  animation: spin 1s linear infinite;
+}
+
+.s {
+  width: 16px;
+  height: 16px;
+}
+
+.m {
+  width: 24px;
+  height: 24px;
+}
+
+.l {
+  width: 32px;
+  height: 32px;
+}
+
+.xl {
+  width: 36px;
+  height: 36px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

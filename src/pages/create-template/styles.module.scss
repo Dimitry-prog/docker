@@ -1,0 +1,16 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  @include flex-column;
+  gap: 48px;
+
+  & > h2 {
+    @include h1-title;
+    color: $color-black;
+  }
+}
+
+.modal {
+  @include text-typing-l;
+}

@@ -1,0 +1,45 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.header {
+  @include flex-between;
+  padding: 48px 48px 0;
+}
+
+.menu-list {
+  display: flex;
+  gap: 36px;
+}
+
+.menu-item {
+  @include text-btn-l;
+}
+
+.wrapper {
+  @include flex-center;
+  gap: 16px;
+}
+
+.input {
+  min-width: 256px;
+}
+
+.active {
+  opacity: $opacity-s;
+}
+
+.list {
+  @include flex-column;
+}
+
+.item {
+  @include text-typing-s;
+  padding: 14px 8px;
+  color: $color-black;
+  transition: $transition-m;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+}

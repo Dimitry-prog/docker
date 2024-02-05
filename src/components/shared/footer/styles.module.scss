@@ -1,0 +1,113 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.footer {
+  padding: 32px 48px;
+}
+
+.container {
+  @include flex-between;
+  max-width: 1184px;
+  margin: 0 auto;
+  gap: 16px;
+  padding: 32px 0;
+  border-top: 1px solid $color-divider;
+  border-bottom: 1px solid $color-divider;
+}
+
+.nav-list {
+  @include flex-row;
+  gap: 24px 16px;
+}
+
+.item {
+  @include table-title;
+  color: $color-black;
+  max-width: 178px;
+  width: 100%;
+  width: 33.33%;
+  transition: $transition-m;
+
+  &:hover {
+    opacity: $opacity-s;
+  }
+}
+
+.wrapper {
+  max-width: 239px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.logo {
+  @include flex-row;
+  gap: 16px;
+}
+
+.image {
+  border-radius: $border-radius-xl;
+  width: 40px;
+  height: 40px;
+}
+
+.text {
+  @include text-typing-s;
+}
+
+.text-xs {
+  @include table-title;
+}
+
+.social {
+  @include flex-between;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.link {
+  display: block;
+  border-radius: $border-radius-xl;
+  width: 40px;
+  height: 40px;
+  transition: $transition-m;
+
+  &:hover {
+    opacity: $opacity-s;
+  }
+}
+
+.link-img {
+  border-radius: $border-radius-xl;
+  width: 40px;
+  height: 40px;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.support {
+  @include flex-between;
+  padding: 32px 0 0;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.help {
+  @include text-typing-xs;
+  color: $color-text;
+}
+
+.button-help {
+  min-width: 97px;
+}

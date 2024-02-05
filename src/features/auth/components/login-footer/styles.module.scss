@@ -1,0 +1,26 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(8px);
+}
+
+.list {
+  @include flex-center;
+  gap: 32px;
+
+  & > li {
+    @include text-typing-s;
+    padding: 30px 0;
+    color: $color-real-black;
+
+    & > a {
+      transition: $transition-m;
+
+      &:hover {
+        opacity: $opacity-m;
+      }
+    }
+  }
+}

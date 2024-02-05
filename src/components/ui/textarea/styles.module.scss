@@ -1,0 +1,73 @@
+@import '@/shared/styles/mixins';
+@import '@/shared/styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  @include text-typing-l;
+  margin-bottom: 16px;
+  color: $color-text;
+}
+
+.textarea {
+  @include text-typing-l;
+  width: 100%;
+  min-height: 120px;
+  padding: 16px 12px;
+  color: $color-black;
+  border-radius: $border-radius-m;
+  border: 1px solid transparent;
+  background-color: $color-filed-grey-default;
+  resize: none;
+  transition: $transition-m;
+
+  &::placeholder {
+    opacity: $opacity-s;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+
+  &:focus {
+    border: 1px solid $color-black;
+    background-color: $color-white;
+  }
+
+  &:disabled {
+    opacity: $opacity-m;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $color-filed-grey-default;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-filed-grey-default;
+  }
+
+  &::-webkit-resizer {
+    background-color: $color-filed-grey-default;
+  }
+}
+
+.invalid {
+  color: $color-red;
+  border: 1px solid $color-red;
+}
+
+.error {
+  @include text-typing-s;
+  margin-top: 4px;
+  color: $color-red;
+}

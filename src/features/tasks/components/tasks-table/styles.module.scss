@@ -1,0 +1,109 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+table {
+  box-sizing: border-box;
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 884px;
+}
+
+.table-head {
+  border-bottom: 1px solid $color-text;
+}
+
+.table-head th {
+  padding-bottom: 8px;
+}
+
+.head-cell {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-black;
+}
+
+.min-width {
+  min-width: 24px;
+}
+
+.rows:hover {
+  background-color: $color-hover-link-brn;
+  transition: $transition-m;
+
+  .links {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.row {
+  padding: 24px 0;
+  border-top: 1px solid $color-divider;
+  border-bottom: 1px solid $color-divider;
+}
+
+.task_name {
+  max-width: 216px;
+}
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 128px;
+  height: 26px;
+  border-radius: 8px;
+}
+
+.status_order {
+  color: $color-blue;
+  background-color: $color-light-blue;
+}
+
+.status_in-work {
+  color: $color-orange;
+  background-color: $color-light-orange;
+}
+
+.status_canceled {
+  color: $color-text;
+  background-color: $color-grey-tertiary-btn;
+}
+
+.status_completed {
+  color: $color-green;
+  background-color: $color-light-green;
+}
+
+.links {
+  margin-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition-m;
+}
+
+.view {
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/eye.svg");
+  background-repeat: no-repeat;
+}
+
+.edit {
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/edit.svg");
+  background-repeat: no-repeat;
+
+
+  &_hidden {
+    display: none;
+  }
+}

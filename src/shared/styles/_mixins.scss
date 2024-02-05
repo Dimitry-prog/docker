@@ -1,0 +1,130 @@
+@mixin text-typing-l {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin text-typing-xs {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+@mixin text-typing-s {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin text-typing-s-bold {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+@mixin h1-title {
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+@mixin h2-title {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+@mixin h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@mixin text-btn-l {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+@mixin text-btn-s {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+@mixin numbers-bold {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+@mixin text-logo {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+@mixin table-title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin text-tooltip {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+@mixin text-status {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+@mixin text-futer {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin size-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@mixin size-image {
+  width: 48px;
+  height: 48px;
+}

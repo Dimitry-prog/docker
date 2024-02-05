@@ -1,0 +1,22 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  width: 48px;
+  height: 48px;
+
+  & > img {
+    border-radius: $border-radius-circle;
+    object-fit: cover;
+  }
+}
+
+.s {
+  width: 48px;
+  height: 48px;
+}
+
+.m {
+  width: 64px;
+  height: 64px;
+}

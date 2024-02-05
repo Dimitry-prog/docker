@@ -1,0 +1,71 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  @include text-typing-l;
+  margin-bottom: 16px;
+  align-self: flex-start;
+  color: $color-text;
+}
+
+.trigger {
+  @include text-typing-l;
+  width: 100%;
+  padding: 16px 8px;
+  display: flex;
+  justify-content: flex-start;
+  color: $color-text;
+  border-radius: $border-radius-m;
+  background-color: $color-filed-grey-default;
+  transition: $transition-m;
+
+  &:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('/icons/date-picker.svg');
+    background-repeat: no-repeat;
+    transition: $transition-m;
+    position: absolute;
+    right: 8px;
+  }
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+
+  &_active {
+    border: 1px solid $color-black;
+    background-color: $color-white;
+  }
+
+  &_error {
+    border-color: $color-red;
+    color: $color-red;
+  }
+
+  &_disabled {
+    opacity: $opacity-m;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $color-filed-grey-default;
+    }
+  }
+}
+
+.value {
+  color: $color-black;
+}
+
+.error {
+  @include text-typing-s;
+  margin-top: 4px;
+  display: block;
+  color: $color-red;
+}

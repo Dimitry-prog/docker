@@ -1,0 +1,21 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.form {
+  @include flex-column;
+  max-width: 440px;
+  width: 100%;
+  padding: 40px;
+  gap: 32px;
+  background-color: $color-white;
+  border-radius: $border-radius-xl;
+
+  & > h2 {
+    @include h2-title;
+    color: $color-real-black;
+  }
+
+  .button-auth {
+    width: 100%;
+  }
+}

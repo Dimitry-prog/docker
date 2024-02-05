@@ -1,0 +1,64 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  @include flex-column;
+  min-width: 284px;
+  gap: 40px;
+}
+
+.back {
+  @include text-btn-l;
+  width: 100%;
+  min-height: 50px;
+  background-color: transparent;
+  border-radius: $border-radius-m;
+  transition: $transition-m;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    background-image: url("/icons/btn-back.svg");
+    background-repeat: no-repeat;
+    transition: $transition-m;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    background-color: $color-grey-tertiary-btn;
+    border-radius: $border-radius-m;
+  }
+}
+
+.link {
+  @include text-btn-s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  color: $color-black;
+  border-radius: $border-radius-m;
+  transition: $transition-m;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+}
+
+.icon {
+  @include size-icon;
+}
+
+.list {
+  @include flex-column;
+  gap: 2px;
+}
+
+.active {
+  background-color: $color-grey-tertiary-btn;
+}

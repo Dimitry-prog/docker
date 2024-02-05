@@ -1,0 +1,55 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  width: 100%;
+}
+
+.head {
+  padding: 0 8px;
+  border-bottom: 1px solid $color-text;
+
+  & > tr > th {
+    @include table-title;
+    padding: 0 0 8px 0;
+    text-align: left;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+}
+
+.body {
+  padding: 0 8px;
+
+  & > tr > td {
+    @include text-typing-s;
+    padding: 24px 0;
+    border-top: 1px solid $color-divider;
+    border-bottom: 1px solid $color-divider;
+  }
+}
+
+.rows {
+  transition: $transition-m;
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+
+    .view {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.view {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  display: block;
+  background-image: url('/icons/eye.svg');
+  background-repeat: no-repeat;
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition-m;
+}

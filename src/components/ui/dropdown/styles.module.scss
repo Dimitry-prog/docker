@@ -1,0 +1,29 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 0;
+  border-radius: $border-radius-m;
+  background-color: $color-white;
+  box-shadow: $box-shadow-m;
+  transition: $transition-s;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  z-index: 999;
+}
+
+.open {
+  transition: $transition-s;
+  visibility: visible;
+  opacity: 1;
+}

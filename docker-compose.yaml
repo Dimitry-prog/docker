@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_value:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  backend:
+    image: artemiiru/alfabank_hackathon:latest
+    env_file: .env
+    volumes:
+      - static_volume:/backend_static
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  db_value:
+  static_volume:
+

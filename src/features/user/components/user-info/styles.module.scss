@@ -1,0 +1,36 @@
+@import "@/shared/styles/styles";
+
+@import "@/shared/styles/styles";
+
+.wrapper {
+  max-width: 384px;
+  width: 100%;
+}
+
+.info {
+  max-width: 384px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: $border-radius-xl;
+  background-color: $color-hover-link-brn;
+}
+
+.name {
+  @include flex-column;
+  gap: 4px;
+
+  &>h3,
+  p {
+    @include text-typing-l;
+    color: $color-real-black;
+  }
+
+  &>span {
+    @include text-typing-l;
+    margin-top: 4px;
+    color: $color-text;
+  }
+}

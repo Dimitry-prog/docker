@@ -1,0 +1,77 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.button {
+  @include text-btn-s;
+  width: fit-content;
+  padding: 4px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-l;
+  transition: $transition-m;
+
+  &:disabled {
+    opacity: $opacity-m;
+    cursor: not-allowed;
+  }
+}
+
+.accent {
+  background-color: $color-red;
+  color: $color-white;
+
+  &:hover {
+    background-color: $color-red-hover;
+  }
+}
+
+.primary {
+  background-color: $color-black;
+  color: $color-white;
+
+  &:hover {
+    background-color: $color-gray-900;
+  }
+}
+
+.secondary {
+  background-color: $color-grey-tertiary-btn;
+  color: $color-black;
+
+  &:hover {
+    background-color: $color-hover-secondary-btn;
+  }
+}
+
+.tertiary {
+  background-color: $color-white;
+  color: $color-black;
+  border: 1px solid $color-black;
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+}
+
+.link {
+  background-color: $color-white;
+  color: $color-black;
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+}
+
+.m {
+  min-height: 56px;
+}
+
+.l {
+  min-height: 64px;
+}
+
+.s {
+  min-height: 36px;
+  padding: 4px 16px;
+}

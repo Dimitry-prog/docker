@@ -1,0 +1,8 @@
+@import "@/shared/styles/styles";
+
+.notification {
+  width: 48px;
+  height: 48px;
+  border-radius: $border-radius-circle;
+  background-color: $color-grey-tertiary-btn;
+}

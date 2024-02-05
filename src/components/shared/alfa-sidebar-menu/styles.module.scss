@@ -1,0 +1,40 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  @include flex-column;
+  min-width: 284px;
+  gap: 20px;
+
+  & > p {
+    @include text-typing-s-bold;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+    color: $color-text;
+  }
+}
+
+.link {
+  @include text-btn-s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  color: $color-black;
+  border-radius: $border-radius-m;
+  transition: $transition-m;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+}
+
+.icon {
+  @include size-icon;
+}
+
+.list {
+  @include flex-column;
+  gap: 2px;
+}

@@ -1,0 +1,61 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  @include flex-column;
+  gap: 48px;
+}
+
+.header {
+  @include flex-column;
+  gap: 32px;
+
+  & > h2 {
+    @include h1-title;
+    color: $color-black;
+  }
+
+  & > div {
+    @include flex-column;
+    gap: 4px;
+
+    & > p {
+      @include text-typing-s-bold;
+      color: $color-text;
+    }
+
+    & > h3 {
+      @include text-typing-l;
+      color: $color-real-black;
+    }
+
+    & > span {
+      @include text-futer;
+      color: $color-text;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  gap: 12px;
+}
+
+.body {
+  @include flex-column;
+  gap: 24px;
+}
+
+.search {
+  width: 260px;
+}
+
+.buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+}
+
+.empty {
+  @include text-typing-l;
+}

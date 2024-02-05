@@ -1,0 +1,33 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.cards {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  width: 100%;
+  padding: 32px;
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: $border-radius-l;
+  overflow: hidden;
+  position: relative;
+}
+
+.heading {
+  @include h3;
+}
+
+.text {
+  @include text-typing-s;
+  max-width: 250px;
+  padding: 8px 0 32px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

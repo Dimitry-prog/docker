@@ -1,0 +1,12 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  display: flex;
+  gap: 16px;
+
+  & > img {
+    object-fit: cover;
+    width: 100%;
+  }
+}

@@ -1,0 +1,51 @@
+@import "@/shared/styles/styles";
+
+.wrapper {
+  max-width: 484px;
+  width: 100%;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 20px;
+  border-radius: $border-radius-xl;
+  background-color: $color-hover-link-brn;
+  transition: $transition-m;
+  position: relative;
+
+  &:hover {
+
+    .edit {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  & > div {
+    @include flex-column;
+    gap: 4px;
+
+    & > span {
+      @include table-title;
+      color: $color-text;
+      text-transform: uppercase;
+    }
+
+    & > p {
+      @include text-typing-l;
+      color: $color-black;
+    }
+  }
+}
+
+.edit {
+  width: 24px;
+  height: 24px;
+  background-image: url('/icons/edit.svg');
+  background-repeat: no-repeat;
+  transition: $transition-m;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}

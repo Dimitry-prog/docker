@@ -1,0 +1,135 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  width: 100%;
+}
+
+.head {
+  padding: 0 8px;
+  border-bottom: 1px solid $color-text;
+
+  & > tr > th {
+    @include table-title;
+    padding: 0 0 24px 0;
+    text-align: left;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+}
+
+.body {
+  padding: 0 8px;
+
+  & > tr > td {
+    @include text-typing-s;
+    padding: 24px 0;
+    border-top: 1px solid $color-divider;
+    border-bottom: 1px solid $color-divider;
+  }
+}
+
+.rows {
+  transition: $transition-m;
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+
+    .view {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.checkbox {
+  margin: 0 28px;
+}
+
+.person {
+  width: fit-content;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.info {
+  @include flex-column;
+
+  & > h5 {
+    @include text-typing-l;
+    color: $color-black;
+  }
+
+  & > span {
+    @include text-typing-l;
+    color: $color-text;
+  }
+}
+
+.status {
+  @include flex-column;
+  @include flex-center;
+
+  & > img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  & > p {
+    @include text-typing-s;
+    color: $color-black;
+  }
+}
+
+.progress {
+  @include flex-center;
+  padding: 0 10px;
+  gap: 10px;
+}
+
+.deadline {
+  @include flex-center;
+
+  & > p {
+    @include text-typing-s;
+    color: $color-black;
+  }
+
+  &_view {
+    margin-right: 28px;
+  }
+}
+
+.view {
+  width: 24px;
+  height: 24px;
+  margin: 0 16px;
+  display: block;
+  background-image: url('/icons/eye.svg');
+  background-repeat: no-repeat;
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition-m;
+}
+
+.emp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  background-image: url('/icons/sort.svg');
+  background-repeat: no-repeat;
+  transition: $transition-m;
+
+  &_desc {
+    transform: rotate(180deg);
+  }
+}

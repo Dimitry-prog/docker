@@ -1,0 +1,60 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  @include flex-column;
+
+  & > h2 {
+    @include h1-title;
+    margin-bottom: 32px;
+  }
+}
+
+.faq {
+  padding: 24px 0;
+  border-bottom: 1px solid $color-divider;
+  cursor: pointer;
+  position: relative;
+
+  &:first-of-type {
+    border-top: 1px solid $color-divider;
+  }
+
+  & > h4 {
+    @include text-typing-s;
+    color: $color-black;
+    margin-left: 32px;
+  }
+
+  &:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('/icons/arrow_down.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    transition: $transition-m;
+    position: absolute;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: $transition-m;
+
+  & > p {
+    overflow: hidden;
+  }
+}
+
+.open {
+  padding-top: 10px;
+  grid-template-rows: 1fr;
+}
+
+.arrow {
+  &:before {
+    transform: rotate(180deg);
+  }
+}

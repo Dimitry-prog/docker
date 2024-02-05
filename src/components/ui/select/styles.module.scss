@@ -1,0 +1,151 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  @include text-typing-l;
+  margin-bottom: 16px;
+  align-self: flex-start;
+  color: $color-text;
+}
+
+.trigger {
+  @include text-typing-l;
+  width: 100%;
+  padding: 16px 8px;
+  display: flex;
+  justify-content: flex-start;
+  color: $color-text;
+  border: 1px solid transparent;
+  border-radius: $border-radius-m;
+  background-color: $color-filed-grey-default;
+  transition: $transition-m;
+
+
+  &:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('/icons/arrow_down.svg');
+    background-repeat: no-repeat;
+    transition: $transition-m;
+    position: absolute;
+    right: 8px;
+  }
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+
+  &_active {
+    border-color: $color-black;
+    background-color: $color-white;
+
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &_error {
+    border-color: $color-red;
+    color: $color-red;
+  }
+
+  &_disabled {
+    opacity: $opacity-m;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $color-filed-grey-default;
+    }
+  }
+}
+
+.value {
+  color: $color-black;
+}
+
+.container {
+  padding-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  @include flex-center;
+  @include text-tooltip;
+  width: fit-content;
+  padding: 8px 20px;
+  gap: 4px;
+  color: $color-white;
+  border-radius: $border-radius-s;
+  background-color: $color-black;
+}
+
+.close {
+  width: 24px;
+  height: 24px;
+  color: $color-white;
+  background-color: transparent;
+  background-image: url('/icons/close-white.svg');
+  background-repeat: no-repeat;
+}
+
+.empty {
+  @include text-typing-s;
+  padding: 14px 8px;
+  text-align: center;
+  color: $color-black;
+}
+
+.search {
+  padding: 0 10px 10px;
+}
+
+.list {
+  @include flex-column;
+  max-height: 250px;
+  position: relative;
+
+  &_empty {
+    overflow: hidden;
+  }
+}
+
+.item {
+  @include text-typing-s;
+  padding: 14px 8px;
+  color: $color-black;
+  transition: $transition-m;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-hover-link-brn;
+  }
+
+  &_active {
+    background-color: $color-hover-secondary-btn;
+  }
+
+  &_del {
+    width: 0;
+    height: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -150%;
+  }
+}
+
+.error {
+  @include text-typing-s;
+  margin-top: 4px;
+  display: block;
+  color: $color-red;
+}
