@@ -15,13 +15,7 @@ const Avatar = ({ size = 's', src }: AvatarProps) => {
   return (
     <div className={cx('wrapper', size)}>
       <img
-        src={
-          src
-            ? src
-            : photo
-              ? `${import.meta.env.VITE_MEDIA_HOST}/${photo}`
-              : '/images/no_avatar.png'
-        }
+        src={src ? `src` : photo ? `${photo}` : '/images/no_avatar.png'}
         alt="аватар пользователя"
         className={cx(size)}
       />

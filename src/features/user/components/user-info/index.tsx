@@ -16,7 +16,7 @@ const UserInfo = ({ userId }: UserInfoProps) => {
   return (
     <div className={cx('wrapper')}>
       <div className={cx('info')}>
-        <Avatar size="m" />
+        <Avatar size="m" src={user?.photo} />
 
         <div className={cx('name')}>
           <h3>{user?.last_name}</h3>

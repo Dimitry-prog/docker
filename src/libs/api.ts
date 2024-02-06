@@ -4,7 +4,7 @@ import { RootState } from '@/libs/store.ts';
 export const api = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_API_BASE_URL,
+    baseUrl: 'http://alfabankhack.ddns.net:8000',
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).authSlice?.token;
 

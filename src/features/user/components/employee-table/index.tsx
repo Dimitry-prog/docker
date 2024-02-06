@@ -79,7 +79,7 @@ const EmployeeTable = ({
             )}
             <td>
               <div className={cx('person')}>
-                <Avatar />
+                <Avatar src={employee.photo} />
                 <div className={cx('info')}>
                   <h5>
                     {employee.first_name} {employee.last_name}
