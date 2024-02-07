@@ -17,9 +17,9 @@ const Avatar = ({ size = 's', src }: AvatarProps) => {
       <img
         src={
           src
-            ? `http://localhost/${src}`
+            ? `http://alfabankhack.ddns.net/${src}`
             : photo
-              ? `http://localhost/${photo}`
+              ? `http://alfabankhack.ddns.net/${photo}`
               : '/images/no_avatar.png'
         }
         alt="аватар пользователя"

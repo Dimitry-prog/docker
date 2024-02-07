@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 const Layout = () => {
   const { pathname } = useLocation();
   const { role } = useUserInfo();
-  console.log(role);
+
   return (
     <div className={cx('wrapper')}>
       <Header />

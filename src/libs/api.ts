@@ -4,7 +4,7 @@ import { RootState } from '@/libs/store.ts';
 export const api = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost',
+    baseUrl: 'http://alfabankhack.ddns.net',
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).authSlice?.token;
 
