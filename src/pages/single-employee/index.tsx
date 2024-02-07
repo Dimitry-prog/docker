@@ -10,11 +10,13 @@ import UserInfo from '@/features/user/components/user-info';
 import PdpForm from '@/features/pdp/components/pdp-form';
 import { useAppSelector } from '@/libs/store.ts';
 import { pdpSelectors } from '@/features/pdp/slices';
+import useUserInfo from '@/features/user/hooks/use-user-info.tsx';
 
 const cx = classNames.bind(styles);
 
 const SingleEmployeePage = () => {
   const { id } = useParams();
+  const { role } = useUserInfo();
   const signal = useAppSelector(pdpSelectors.getSignal);
   const { data: pdp, isLoading } = useGetPdpByIdQuery(id!);
 
@@ -26,7 +28,7 @@ const SingleEmployeePage = () => {
 
       <div className={cx('content')}>
         <div className={cx('header')}>
-          {pdp && pdp.goal !== '' && <UserGoal pdp={pdp} />}
+          {pdp && pdp.goal !== '' && <UserGoal pdp={pdp} role={role} />}
 
           <UserInfo userId={pdp?.user_id as number} />
         </div>
