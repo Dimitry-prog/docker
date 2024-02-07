@@ -15,7 +15,13 @@ const Avatar = ({ size = 's', src }: AvatarProps) => {
   return (
     <div className={cx('wrapper', size)}>
       <img
-        src={src ? src : photo ? photo : '/images/no_avatar.png'}
+        src={
+          src
+            ? `http://localhost/${src}`
+            : photo
+              ? `http://localhost/${photo}`
+              : '/images/no_avatar.png'
+        }
         alt="аватар пользователя"
         className={cx(size)}
       />
